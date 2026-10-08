@@ -1,0 +1,78 @@
+::selection{background:#272521;color:#f7f5f1}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #687466;outline-offset:5px}
+.site-header{backdrop-filter:blur(12px);background:rgba(245,242,237,.92)}
+.announcement-bar{letter-spacing:.18em}
+.floating-booking{box-shadow:0 14px 30px rgba(39,37,33,.16);transition:background .25s,box-shadow .25s,transform .25s}
+.floating-booking:hover{box-shadow:0 20px 34px rgba(39,37,33,.22)}
+.premium-footer a{transition:color .2s,transform .2s}
+.premium-footer a:hover{color:#272521;transform:translateX(5px)}
+.featured-section,.atelier-story,.home-contact{position:relative}
+.featured-section::before,.atelier-story::before,.home-contact::before{background:linear-gradient(90deg,transparent,rgba(36,34,31,.14),transparent);content:'';height:1px;left:8vw;position:absolute;right:8vw;top:0}
+.ritual-section{position:relative}
+.ritual-section::after{border:1px solid rgba(247,245,241,.18);content:'';inset:18px;pointer-events:none;position:absolute}
+.home-image .home-video{filter:saturate(.92);transition:filter .8s,transform 1.2s}
+.home-image:hover .home-video{filter:saturate(1.06);transform:scale(1.025)}
+.image-caption{opacity:.9;transition:opacity .3s}
+.home-image:hover .image-caption{opacity:1}
+@media(max-width:700px){
+  .site-header{backdrop-filter:blur(10px)}
+  .ritual-section::after{inset:10px}
+  .featured-section::before,.atelier-story::before,.home-contact::before{left:8vw;right:8vw}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-image .home-video,.floating-booking{transition:none}
+}
+
+body{animation:page-arrival .7s ease both}
+.home-message{animation:hero-copy-arrival .9s .08s ease both}
+.home-image{animation:hero-image-arrival 1s ease both}
+.home-kicker{line-height:1.5}
+.floating-booking{border:1px solid rgba(247,245,241,.16);border-radius:2px}
+.site-header .menu-button{align-items:flex-start;display:flex;flex-direction:column;gap:5px;height:24px;justify-content:center;width:28px}
+.site-header .menu-button span{background:var(--ink);display:block;height:1px;margin:0;width:24px}
+.site-header .menu-button[aria-expanded=true]{gap:0}
+.site-header .menu-button[aria-expanded=true] span:first-child{transform:translateY(1px) rotate(45deg)}
+.site-header .menu-button[aria-expanded=true] span:nth-child(2){opacity:0}
+.site-header .menu-button[aria-expanded=true] span:last-child{transform:translateY(-1px) rotate(-45deg)}
+@keyframes page-arrival{from{opacity:0}to{opacity:1}}
+@keyframes hero-copy-arrival{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-image-arrival{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+@media(max-width:700px){
+  .home-message{padding-bottom:calc(13vw + 72px)}
+  .floating-booking{display:none}
+  .home-image{animation-duration:.8s}
+}
+@media(prefers-reduced-motion:reduce){
+  body,.home-message,.home-image{animation:none}
+}
+
+:root{
+  --cream:#f7f3ee;
+  --ink:#292522;
+  --muted:#786f68;
+  --sage:#e8dcd4;
+  --line:rgba(92,67,57,.18);
+  --champagne:#c9a982;
+  --dusty-rose:#a97870;
+}
+.announcement-bar{background:var(--ink)}
+.page-hero,.catalog-intro,.text-page{background:linear-gradient(135deg,#eee2d9,#e5d3cd)}
+.page-hero>p:last-child,.catalog-intro>p:last-child,.text-page>p:not(.section-label){color:#6f5d56}
+.section-label,.product-index{color:var(--dusty-rose)}
+.product-grid{row-gap:88px}
+.product-card h2{transition:color .25s}
+.product-card:hover h2{color:var(--dusty-rose)}
+.product-card span,.text-link{transition:color .25s,border-color .25s}
+.product-card:hover span,.text-link:hover{border-color:var(--champagne);color:var(--dusty-rose)}
+.home-button,.detail-button,.contact-form .button{background:var(--dusty-rose);border:1px solid rgba(255,255,255,.9);color:#fff!important;transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.home-button:hover,.detail-button:hover,.contact-form .button:hover{background:#8f625b;box-shadow:0 12px 24px rgba(143,98,91,.2);transform:translateY(-2px)}
+.home-button:hover,.detail-button:hover,.contact-form .button:hover{border-color:#fff}
+.header-contact{border-color:var(--dusty-rose)!important}
+.featured-section,.atelier-story,.home-contact{padding-top:clamp(88px,10vw,150px)}
+.featured-section::before,.atelier-story::before,.home-contact::before{background:linear-gradient(90deg,transparent,rgba(169,120,112,.38),transparent)}
+.site-footer,.premium-footer{background:#2f2926}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline-color:var(--dusty-rose)}
+@media(max-width:700px){
+  .product-grid{row-gap:58px}
+  .featured-section,.atelier-story,.home-contact{padding-top:78px}
+}

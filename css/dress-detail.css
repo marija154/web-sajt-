@@ -1,0 +1,13 @@
+.dress-detail-page{display:grid;gap:7vw;grid-template-columns:1.2fr .8fr;min-height:calc(100vh - 88px);padding:70px 7vw 100px}
+.dress-detail-gallery{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+.dress-detail-gallery img{background:var(--light);height:100%;min-height:300px;object-fit:cover;width:100%}
+.dress-detail-gallery img:first-child{grid-row:span 2;min-height:620px}
+.dress-detail-copy{align-self:center;max-width:410px}
+.dress-detail-copy h1{font:500 clamp(54px,7vw,100px)/.9 var(--serif);letter-spacing:-.06em;margin:25px 0}
+.dress-detail-copy>p:not(.section-label){color:#59605a;line-height:1.7;max-width:320px}
+.detail-button{background:var(--ink);color:var(--paper);display:inline-flex;font-size:10px;letter-spacing:.1em;margin-top:34px;padding:18px 25px;text-transform:uppercase}
+.detail-back{border-bottom:1px solid var(--ink);display:block;font-size:10px;letter-spacing:.1em;margin-top:25px;padding-bottom:7px;text-transform:uppercase;width:max-content}
+.detail-navigation{align-items:center;border-top:1px solid var(--line);display:flex;gap:25px;justify-content:space-between;margin-top:65px;padding-top:18px}
+.detail-navigation a{font:28px var(--serif)}
+.detail-navigation span{color:#77736d;font-size:10px;letter-spacing:.14em}
+@media(max-width:700px){.dress-detail-page{display:flex;flex-direction:column;gap:40px;padding:35px 8vw 80px}.dress-detail-gallery{gap:10px}.dress-detail-gallery img{min-height:180px}.dress-detail-gallery img:first-child{min-height:370px}.dress-detail-copy h1{font-size:60px}.detail-navigation{margin-top:45px}}

@@ -1,0 +1,21 @@
+.sr-only{height:1px;margin:-1px;overflow:hidden;position:absolute;width:1px;clip:rect(0,0,0,0)}
+body.menu-open{overflow:hidden}
+.site-header .main-nav.open{align-items:stretch;background:#fff;display:block!important;height:100vh;left:0;margin:0;overflow:auto;padding:130px 8vw 48px;position:fixed;top:0;width:100%;z-index:10}
+.site-header .main-nav.open .menu-search{align-items:center;border:1px solid rgba(36,34,31,.65);display:flex;margin:0 auto 42px;max-width:900px}
+.menu-search input{background:transparent;border:0;color:var(--ink);font:18px Georgia,serif;min-height:50px;outline:0;padding:0 15px;width:100%}
+.menu-search button{background:none;border:0;color:var(--ink);cursor:pointer;font:28px Georgia,serif;line-height:1;padding:0 16px}
+.search-results{display:none;margin:0 auto 34px;max-width:900px}
+.search-results.is-visible{display:block}
+.search-results p{color:#746e66;font-size:12px;margin:0 0 14px}
+.search-result{border-top:1px solid rgba(36,34,31,.22);display:block;padding:15px 0}
+.search-result strong{display:block;font:20px Georgia,serif;letter-spacing:normal}
+.search-result span{color:#746e66;display:block;font-size:11px;letter-spacing:normal;line-height:1.5;margin-top:5px}
+.search-result:hover strong{opacity:.55}
+.site-header .main-nav.open .menu-links{display:flex;flex-direction:column;gap:26px;margin:0 auto;max-width:900px}
+.site-header .main-nav.open .menu-links a{font:22px Georgia,serif;letter-spacing:-.03em;text-transform:none;transition:opacity .2s}
+.site-header .main-nav.open .menu-links a:hover{opacity:.52;transform:none}
+.menu-meta{border-top:1px solid rgba(36,34,31,.35);display:flex;gap:22px;justify-content:center;margin:38px auto 0;max-width:900px;padding-top:24px}
+.menu-meta a,.menu-meta span{font:13px Georgia,serif}
+.menu-meta span{border-left:1px solid rgba(36,34,31,.35);padding-left:22px}
+@media(min-width:701px){.site-header .main-nav.open{padding-left:16vw;padding-right:16vw}}
+@media(max-width:700px){.site-header .main-nav.open{padding:105px 8vw 34px}.site-header .main-nav.open .menu-search{margin-bottom:34px}.menu-search input{font-size:16px}.site-header .main-nav.open .menu-links a{font-size:21px}}
